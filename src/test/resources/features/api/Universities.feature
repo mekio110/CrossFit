@@ -3,12 +3,19 @@ Feature: Universities
 
   Background: Accept Json
     Given header should have json
+    When user send get request to "search"
 
   Scenario: All universities
-    When user send get request to "search"
     Then Response status code should be 200
     And header should have content type json
 
   Scenario: Number of universities
-    When user send get request to "search"
     Then number of universities should be 9746
+
+    #Deserialization
+  Scenario: Convert Json to POJO
+    Then convert Json to POJO
+
+    #Serialization
+  Scenario: Convert POJO to Json
+    Then convert POJO to Json
