@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/crossFit/library/step_definitions",
         dryRun = false,
-        tags = ("@1")
+        tags = ("@regression")
 )
 public class CukesRunner {
 }
